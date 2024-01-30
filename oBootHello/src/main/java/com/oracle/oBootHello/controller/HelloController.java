@@ -18,7 +18,7 @@ public class HelloController {
 	// logger는 system message 처럼 뿌려줌 좀더 자세히 알려줌
 	// Prefix -> templates
 	// suffix -> .html
-	
+	// Mapping 의 hello는 string의 hello와 달라도 됨
 	@RequestMapping("hello")
 	public String hello(Model model) {
 		System.out.println("hello start...");
@@ -42,7 +42,7 @@ public class HelloController {
 		logger.info("ename->{}",ename);
 		Emp emp =new Emp();
 		emp.setEmpno(empno);
-		emp.setEname(empno);
+		emp.setEname(ename);
 		
 		return emp;
 	}
